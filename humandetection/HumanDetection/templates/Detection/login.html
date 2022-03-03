@@ -1,0 +1,55 @@
+{% extends 'Detection/index.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+<!-- {% block condent %}
+<div class="login-box">
+    <h2 class="fw-bold text-white">Login</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" name="" required="">
+        <label class="fw-bold text-white">Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="" required="">
+        <label class="fw-bold text-white">Password</label>
+      </div>
+      <a id="box" href="#" class="fw-bold btn nav-link active text-white">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Log In
+      </a>
+    </form>
+  </div>
+  <h1>uhfw8eufwgf7tf8eryfeghtiygy9u</h1>
+{% endblock %} -->
+{% block content %}
+<div class="container cover pt-5" >
+    <div class="row mt-5 pt-3">
+        <div class="col-md-5 offset-md-4">
+            <div class="card my-3 ">
+                <div class="card-body">
+                    <h4>Login Page</h4>
+                    <hr>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-primary btn-block" type="submit" value="Login">
+                    </form>
+                    <div class="text-center">
+                        <a href="">Forget Password</a>
+                    </div>
+                    <hr>
+                    <div class="text-center my-3">
+                    <!-- <a class="btn btn-success" href="{% url 'users-sign-up' %}">Create An Account</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
